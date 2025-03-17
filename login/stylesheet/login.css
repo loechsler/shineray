@@ -1,0 +1,117 @@
+/**
+ * Paleta de cores
+ */
+:root {
+	--background: hsl(0, 20%, 95%);
+	--background-form: hsl(0, 100%, 100%);
+	--background-mask: hsl(0, 0%, 15%);
+	--color-clear: hsl(0, 0%, 60%);
+	--color-input: hsl(0, 0%, 15%);
+	--color-mask: hsl(0, 100%, 100%);
+
+}
+
+/**
+ * CSS Reset e Box Sizing
+ */
+html {
+	box-sizing: border-box;
+}
+*, *::before, *::after {
+	border: 0;
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+/**
+ * Corpo e Estrutura do Documento
+ */
+body {
+	background: var(--background);
+	font: normal 100% 'Helvetica', Sans-Serif;
+}
+#document {
+	margin: 10px;
+}
+
+/**
+ * Cabeçalho
+ */
+header {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	padding: 10px;
+}
+header img {
+	align-items: center;
+	display: block;
+	height: 50px;
+	margin: 15px 0 15px 0;
+	width: 300px;
+}
+
+/**
+ * Main
+ */
+main {
+	align-items: stretch;
+	background: var(--background-mask);
+	border-radius: 6px;
+	display: flex;
+	flex-direction: column;
+	margin: 0 0 10px;
+	padding: 10px;
+}
+main h2 {
+	color: var(--color-mask);
+	font: bold 1.4em 'Helvetica', Sans-Serif;
+	padding: 0 0 5px 3px;
+}
+
+/**
+ * Formulário de Autenticação
+ */
+form {
+	align-items: center;
+	background: var(--background-form);
+	border-radius: 8px;
+	display: flex;
+	position: relative;
+	width: 100%;
+}
+form input[type="password"] {
+	-moz-appearance: none;
+	-ms-text-size-adjust: 100%;
+	-webkit-appearance: none;
+	-webkit-text-size-adjust: 100%;
+	appearance: none;
+	background: transparent;
+	border-radius: 8px;
+	color: var(--color-input);
+	cursor: text;
+	flex: 1;
+	font: 1rem/1.6;
+	outline: none;
+	padding: 12px 15px;
+	text-transform: uppercase;
+}
+form .clear {
+	align-items: center;
+	background: none;
+	border-radius: 0 8px 8px 0;
+	color: var(--color-clear);
+	cursor: pointer;
+	font-size: 1.6em;
+	height: 100%;
+	line-height: 1;
+	margin: 0 0 0 20px;
+	padding: 0 10px 5px;
+	position: absolute;
+	right: 0;
+	visibility: hidden;
+}
+form .clear.visible {
+	visibility: visible;
+}
