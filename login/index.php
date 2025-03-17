@@ -14,12 +14,8 @@
 	/**
 	 * Verificação de credenciais
 	 */
-	if(!isset($_SESSION['auth']) && ($_SESSION['auth'] != true)) {
-		header('Location: login/');
-			exit();
-	}
-	else {
-		header('Location: login/');
+	if(isset($_SESSION['auth']) && ($_SESSION['auth'] == true)) {
+		header('Location: painel/');
 			exit();
 	}
 ?>
